@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo de Programa JavaScript</title>
+    <style>
+      #nome {
+        font-size: 24px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Program Example</h1>
+    <p>The user's name is: <span id="nome"></span></p>
+    <script>
+      // Obtém o elemento HTML onde o nome será exibido
+      const nomeElemento = document.getElementById('nome');
+
+      // Obtém o nome do usuário
+      const nome = 'Edy lima.';
+
+      // Define o nome como o conteúdo do elemento HTML
+      nomeElemento.textContent = nome;
+    </script>
+    <a href="SegundoPrograma.html">Next program</a>
+  </body>
+</html>

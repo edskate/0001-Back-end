@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript.js"></script>
+    <style>
+        #calendar {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#calendar th, #calendar td {
+  padding: 10px;
+  text-align: center;
+}
+
+.day {
+  background-color: #f2f2f2;
+  transition: background-color 0.3s ease;
+}
+
+.day.highlight {
+  background-color: #ffcc00;
+}
+
+.day.animate {
+  animation: highlight 1s infinite alternate;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: #ffcc00;
+  }
+  100% {
+    background-color: #ff6600;
+  }
+ 
+}
+b{
+color: #00ff40;
+text-shadow: 1px 1px 1px #000, -1px 1px 1px  #000;
+font-size: 20px;
+letter-spacing: 1cqmax;
+ }
+    </style>
+</head>
+<body>
+    <table id="calendar">
+        <thead>
+        <tr>
+          <th>Novembro</th>
+          <th>Dezembro</th>
+          <th>Dezembro</th>
+          <th>Janeiro</th>
+          <th>Janeiro</th>
+          <th>Fevereiro</th>
+          <th>Fevereiro</th>
+        </tr>
+          <tr>
+            <th>Sexta</th>
+            <th>Sexta</th>
+            <th>Quinta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="day"><b>24/11/2023</b></td>
+            <td class="day"><b>01/12/2023</b></td>
+            <td class="day"><b>28/12/2023</b></td>
+            <td class="day">20/01/2024</td>
+            <td class="day">28/01/2024</td>
+            <td class="day">20/02/2024</td>
+            <td class="day">28/02/2024</td>
+            <td class="day"></td>
+            <td class="day"></td>
+            <td class="day"></td>
+            <td class="day"></td>
+            <td class="day"></td>
+            
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>

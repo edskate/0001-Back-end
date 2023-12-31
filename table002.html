@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela de Frequência</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .presente {
+            background-color: green;
+            color: white;
+        }
+
+        .ausente {
+            background-color: red;
+            color: white;
+        }
+        button{
+            background-color: rgb(251, 255, 255);
+            color: black;
+            font-size: 15px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test table November.</h1>
+    <h2>Add your test frequency. </h2>
+    <table>
+        <tr>
+            <th>Aluno</th>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Mês</th>
+            <th>Hora de Entrada</th>
+            <th>Hora de Saída</th>
+        </tr>
+        <tr>
+            <td>Abizael</td>
+            <td>02/01/2024</td>
+            <td>Terça</td>
+            <td>Janeiro</td>
+            <td class="presente" contenteditable="true">08:00</td>
+            <td class="presente" contenteditable="true">08:00</td>
+        </tr>
+ 
+     
+    </table>
+
+    <button onclick="adicionarEntrada()">Adicionar Hora de Entrada</button>
+    <button onclick="adicionarSaida()">Adicionar Hora de Saída</button>
+<br>
+    <script>
+        // Adicionar interatividade usando JavaScript
+        var cells = document.querySelectorAll('td');
+
+        cells.forEach(function(cell) {
+            cell.addEventListener('click', function() {
+                if (cell.classList.contains('presente')) {
+                    cell.classList.remove('presente');
+                    cell.classList.add('presente');
+                    cell.innerText = '&nbsp;';
+                } else {
+                    cell.classList.remove('ausente');
+                    cell.classList.add('presente');
+                    cell.innerText = 'X';
+                }
+            });
+        });
+
+        function adicionarEntrada() {
+            var time = prompt('Digite a hora de chegada:');
+            if (time) {
+                var cells = document.querySelectorAll('td.presente:nth-child(5)');
+                cells.forEach(function(cell) {
+                    cell.innerText = time;
+                });
+            }
+        }
+
+        function adicionarSaida() {
+            var time = prompt('Digite a hora de saída:');
+            if (time) {
+                var cells = document.querySelectorAll('td.presente:nth-child(6)');
+                cells.forEach(function(cell) {
+                    cell.innerText = time;
+                });
+            }
+        }
+    </script>
+</body>
+</html>
